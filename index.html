@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Zup IT Innovation</title>
+        <title>BB -Gerenciador de APIs</title>
+		<meta name="author" content="Felipe Furtado - F3191441">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -52,10 +53,37 @@
                         </br>
                     </p>
                 </section>
+                </section>
+                <section data-background="#ffffff">
+					<section class="intro" data-background="images/api.png" data-transition="zoom">
+						<h2 style="color:#65DD58;">O que significa API?</h2>
+						<p class="fragment" style="margin-top:50px; color:#21467b;">Aplication Programming Interface<br>Interface de Programação de Aplicativos</p>
+						<p class="fragment" style="margin-top:50px; color:#21467b;">API é um conjunto de rotinas e padrões de programação para acesso a um aplicativo de software ou plataforma baseado na Web.</p>
+					</section>
+                </section>
+
+
+
+				
+                <section data-background="#ffffff">
+					<section class="intro" data-background="images/api.png" data-transition="zoom">
+						<h2 style="color:#65DD58;">Por que usar um Gestor de API?</h2>
+						</br>
+						<ul>
+							<li class="fragment">Iniciativas <i>Open banking</i> / Transformação Digital - Prover para desenvolvedores acesso as operações do BB</li></br>
+							<li class="fragment"><i>Dynamic Cache</i> - Redução de custo operacional com a utilização de Cache</li></br>
+							<li class="fragment">Gerenciamento de APIs - Centralização das operações, versionamento em multiplos <i>datacenters</i> e acompanhamento <i>realtime</i>.</li>
+						</ul>
+					</section>
+                </section>
+
+
+
+
                 <section data-background="#ffffff">
                     <section data-background="#ffffff">
                         <h2 style="color:#65DD58">Arquitetura</h2>
-                        <p>A plataforma Zup combina elementos em uma arquitetura flexível, econômica, sólida e capaz de suportar as necessidades de negócio de cada cliente.</p>
+                        <p style="color:#21467b;">A plataforma Zup combina elementos em uma arquitetura flexível, econômica, sólida e capaz de suportar as necessidades de negócio de cada cliente.</p>
                         <img src="images/zup-nuvem.png" >
                         <p>
                         <center>
@@ -67,405 +95,203 @@
                     </section>
                     <section data-markdown >
                         <script type="text/template">
+                            ##<img src="images/pipeline_zup.png" >
+                        </script>
+                    </section>
+                    <section data-markdown >
+                        <script type="text/template">
                             ## <h3 style="color:#08904B">Api Manager</h3>
-                            Componente através do qual os usuários interagem com a solução. Fazem parte desse componente o portal de configuração de APIs e o portal de desenvolvedores.
+                            <p style="color:#21467b;">Componente através do qual os usuários interagem com a solução. Fazem parte desse componente o portal de configuração de APIs e o portal de desenvolvedores.</p>
                             ##<img src="images/ruby1.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">User Manager</h3>
-                            Conjunto de APIs REST responsáveis pela integração com diferentes provedores de autenticação.
+                            <p style="color:#21467b;">Conjunto de APIs REST responsáveis pela integração com diferentes provedores de autenticação.</p>
                             ##<img src="images/ruby1.png" >
+                            <li style="font-size: 30px;" class="fragment"> LDAP ou <s>AD</s></li>
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Zupme Ui</h3>
-                            Interface gráfica dos portais de configuração de APIs e do desenvolvedor. É composta apenas por arquivos estáticos (HTML, CSS e Javascript) que utilizam as APIs fornecidas pelos ​ <b>zupme-api-manager-api</b> e ​ <b>zupme-user-manager-api.</b>
+                            <p style="color:#21467b;">Interface gráfica dos portais de configuração de APIs e do desenvolvedor. É composta apenas por arquivos estáticos (HTML, CSS e Javascript) que utilizam as APIs fornecidas pelos API Manager e User Manager.</p>
                             ##<img src="images/angular1.png" > 
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">PostgreSQL</h3>
-                            Base de dados relacional, onde se localiza toda a configuração de APIs e gerenciamento de usuários. Utilizado pelo API Manager API e User Manager API.
+                            <p style="color:#21467b;">Base de dados relacional, onde se localiza toda a configuração de APIs e gerenciamento de usuários. Utilizado pelo API Manager e User Manager.</p>
                             ##<img src="images/postgres1.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Zupme Gateway</h3>
-                            Responsável pelo processamento, encaminhamento e modificação das requisições
-                            referentes às APIs configuradas no ambiente.
+                            <p style="color:#21467b;">Responsável pelo processamento, encaminhamento e modificação das requisições referentes às APIs configuradas no ambiente.</p>
                             ##<img src="images/gateway.png" >
                         </script>
                     </section>
                     <section data-markdown  >
                         <script type="text/template">
                             ## <h3 style="color:#048665">Commons Lib</h3>
-                            Biblioteca comum a todos os componentes responsável por prover operações como: extrações de dados, asserções lógicas e ofuscação.
+                            <p style="color:#21467b;">Biblioteca comum a todos os componentes responsável por prover operações como: extrações de dados, asserções lógicas e ofuscação.</p>
                             ##<img src="images/comm.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Event Processor</h3>
-                            Processamento assíncrono e envio de eventos para o componente Event Handler.
+                            <p style="color:#21467b;">Processamento assíncrono e envio de eventos para o componente Event Handler.</p>
                             ##<img src="images/gateway.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Couchbase</h3>
-                            Base de dados não relacional de ​ runtime onde é armazenada a estrutura de dados dos recursos de APIs e Cache de respostas
+                            <p style="color:#21467b;">Base de dados não relacional onde é armazenada a estrutura de dados dos recursos de APIs e Cache de respostas</p>
                             ##<img src="images/couch.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Event handler</h3>
-                            Recebe os eventos do gateway e redireciona para uma fila in-memory que será consumida pelo Logstash.
+                            <p style="color:#21467b;">Recebe os eventos do gateway e redireciona para uma fila <i>in-memory</i> que será consumida pelo Logstash.</p>
                             ##<img src="images/gateway.png" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">Logstash</h3>
-                            Trata, ofusca e persiste os eventos no Elasticsearch.
+                            <p style="color:#21467b;">Trata, ofusca e persiste os eventos no Elasticsearch.</p>
                             ##<img src="images/logs.jpg" >
                         </script>
                     </section>
                     <section data-markdown >
                         <script type="text/template">
                             ## <h3 style="color:#08904B">ElasticSearch</h3>
-                            Plataforma de análise e pesquisa de dados em tempo real.
+                            <p style="color:#21467b;">Plataforma de análise e pesquisa de dados em tempo real.</p>
                             ##<img src="images/elastic.jpg" >
                         </script>
                     </section>
+                    <section data-markdown >
+						<script type="text/template">
+                            ##<img src="images/topologiaGestor.jpg" >
+						</script>
+                    </section>
                 </section>
+
+
+
+
+
+				<section data-background="#ffffff">
+					<section data-background="#ffffff">
+						<h2 style="color:#65DD58">Fluxo de Comunicação</h2>
+						<p>Principais fluxos de comunicação da ferramenta, a partir dos quais é possível ter um melhor entendimento de como os elementos arquiteturais interagem</p>
+						<img src="images/fluxo.jpg" >
+					</section>
+					<section data-transition="slide" data-background="#ffffff" data-background-transition="slide">
+						<h2 style="color:#21467b;">Controle de Acesso</h2>
+						<ul>
+						<li style="font-size: 30px;" class="fragment">Usuário informa credenciais de acesso</li>
+						<li style="font-size: 30px;" class="fragment">Zupme UI envia credenciais informadas para User Manager</li>
+						<li style="font-size: 30px;" class="fragment">User Manager consulta o provedor de autenticação (LDAP ou <s>AD</s>) e retorna uma sessão de acesso caso as credenciais sejam válidas.
+						</li>
+					</section>
+					<section data-background="#ffffff">
+						<br/>
+						<h2 style="color:#21467b">Deploy de APIs</h2>
+						<ul>
+							<li style="font-size: 30px;" class="fragment">Usuário cria API que é armazenada na base de dados PostgreSQL</li>
+							<li style="font-size: 30px;" class="fragment">Usuário realiza o Deploy no Gateway (Entrypoint) desejado</li>
+							<li style="font-size: 30px;" class="fragment">Configuração de APIs é enviada para o Gateway na porta de deploy configurada</li>
+							<li style="font-size: 30px;" class="fragment">Gateway recebe configurações e armazena no Couchbase</li>
+							<li style="font-size: 30px;" class="fragment">Gateway envia informações de ofuscação para o Event Handler</li>
+							<li style="font-size: 30px;" class="fragment">Event Handler recebe configurações e armazena no Couchbase</li>
+							<li style="font-size: 30px;" class="fragment">API está publicada e pronta para ser consumida.</li>
+						</ul>
+					</section>
+					<section ata-transition="slide" data-background="#ffffff" data-background-transition="slide">
+						<h2 style="color:#21467b;">Processamento de Requisições</h2>
+						<ul>
+							<li style="font-size: 30px;" class="fragment">Aplicativo envia request para o Gateway</li>
+							<li style="font-size: 30px;" class="fragment">Gateway aplica possíveis transformações no request e envia para o Endpoint</li>
+							<li style="font-size: 30px;" class="fragment">Gateway envia response para o aplicativo após aplicar possíveis transformações</li>
+							<li style="font-size: 30px;" class="fragment">Gateway envia evento para o Event Handler</li>
+							<li style="font-size: 30px;" class="fragment">Event Handler envia evento para Logstash que aplica possíveis ofuscações e persiste no ElasticSearch.</li>
+						</ul>
+					</section>
+					<section ata-transition="slide" data-background="#ffffff" data-background-transition="slide">
+						<h2 style="color:#21467b;">Visualização de Logs</h2>
+						<ul>
+							<li style="font-size: 30px;" class="fragment">Usuário cria query através da interface de usuário</li>
+							<li style="font-size: 30px;" class="fragment">Zupme UI envia query para API Manager</li>
+							<li style="font-size: 30px;" class="fragment">API Manager realiza consulta no Elasticsearch</li>
+							<li style="font-size: 30px;" class="fragment">Elasticsearch retorna eventos para o API Manager.</li>
+						</ul>
+					</section>
+				</section>
+
+
+
+				
+				<section data-background="#ffffff">
+					<section data-background="#ffffff">
+						<h2 style="color:#65DD58">Monitoramento</h2>
+						<img style="width:80%;" src="images/moni.png" >
+						<p style="color:#21467b;">A infraestrutura foi desenvolvida a fim de facilitar a detecção de incidentes que vão desde simples notificações por e-mail, até integração com sistemas de monitoramento robustos.</p>
+					</section>
+					<section data-background="#ffffff" data-transition="zoom">
+						<h1 style="color:#23887E;">E o que é monitorado?</h1>
+					</section>
+					<section data-background="#ffffff" data-transition="zoom">
+						<h2 style="color:#23887E;">Monitoramento de Infraestrutura</h2>
+						<ul>
+							<li style="font-size: 30px;">Acompanhamento com base em cenário web</li>
+							<li style="font-size: 30px;" class="fragment">Monitoramento através de logs</li>
+							<li style="font-size: 30px;" class="fragment">Dashboards personalizados</li>
+							<li style="font-size: 30px;" class="fragment">Monitoramento em <i>real-time</i> de performance do servidor e serviços.</li>
+						</ul>
+						<img class="fragment" style="width: 30%; margin: 80px 0px 0px 100px;" src="images/zabbix.png"   onclick="window.open('http://integracao-api.servicos.bb.com.br/zabbix/screens.php?ddreset=1&fullscreen=1','_black');"/>
+					</section>
+					<section data-background="#ffffff" data-transition="zoom">
+						<h2 style="color:#23887E;">Monitoramento das API's</h2>
+						<ul>
+							<li style="font-size: 30px;">Monitoramento da saúde e respostas das API's</li>
+							<li style="font-size: 30px;" class="fragment">Acompanhamento de negócio</li>
+							<li style="font-size: 30px;" class="fragment">Análise de Comportamento das API's.</li>
+						</ul>
+						<img class="fragment" style="width: 30%; margin: 80px 0px 0px 155px;" src="images/kibana.png"   onclick="window.open('http://integracao-api.servicos.bb.com.br/kibana/app/kibana#/dashboard/8c305d30-464f-11e7-88c0-e1c6929cd779?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-7d%2Cmode%3Aquick%2Cto%3Anow))','_black');"/>
+					</section>
+				</section>
+
+
+
+
                 <section data-background="#ffffff">
-                    <h2 style="color:#65DD58">Fluxo de Comunicação</h2>
-                    <p>Principais fluxos de comunicação da ferramenta, a partir dos quais é possível ter um melhor entendimento de como os elementos arquiteturais interagem</p>
-                    <img src="images/fluxo.jpg" >
+					<section data-background="images/code.jpg">
+						<h1>Infraestrutura Ágil</h1>
+					</section>
+						<section data-background="#ffffff"">
+						<h2 style="color:#33ACD0;">Automação</h2>
+						<img style="width: 80%;" src="images/automacao.jpg"/>
+						<img class="fragment" style="width: 80%;" src="images/automacaoTools.jpg"/>
+						<p style="color:#21467b;">Visando as boas pratica do mercado a plataforma do Gestor de API's prove uma camada de automação para prover novos ambientes de acordo com recursos e necessidades</p>
+					</section>
+						<section data-background="#ffffff">
+						<h2 style="color:#33ACD0;">Ferramentas</h2>
+						<img style="width: 80%;" src="images/tools.jpg">
+					</section>
                 </section>
-                <section ata-transition="slide" data-background="#ffffff" data-background-transition="slide">
-                    <h2 style="color:#333131;">Controle de Acesso</h2>
-                    <ul>
-                    <li style="font-size: 30px;" class="fragment">Usuário informa credenciais de acesso</li>
-                    <li style="font-size: 30px;" class="fragment">Zupme UI envia credenciais informadas para User Manager</li>
-                    <li style="font-size: 30px;" class="fragment">User Manager consulta o provedor de autenticação (LDAP, AD) e retorna uma
-                        sessão de acesso caso as credenciais sejam válidas.
-                    </li>
-                </section>
-                <section data-background="#ffffff">
-                    <br/>
-                    <h3 style="color:#08904B">Deploy de APIs</h3>
-                    <ul>
-                        <li style="font-size: 30px;" class="fragment">Usuário cria API que é armazenada na base de dados PostgreSQL</li>
-                        <li style="font-size: 30px;" class="fragment">Usuário realiza o Deploy no Gateway (Entrypoint) desejado</li>
-                        <li style="font-size: 30px;" class="fragment">Configuração de APIs é enviada para o Gateway na porta de deploy configurada</li>
-                        <li style="font-size: 30px;" class="fragment">Gateway recebe configurações e armazena no Couchbase</li>
-                        <li style="font-size: 30px;" class="fragment">Gateway envia informações de ofuscação para o Event Handler</li>
-                        <li style="font-size: 30px;" class="fragment">Event Handler recebe configurações e armazena no Couchbase</li>
-                        <li style="font-size: 30px;" class="fragment">API está publicada e pronta para ser consumida.</li>
-                    </ul>
-                </section>
-                <section ata-transition="slide" data-background="#ffffff" data-background-transition="slide">
-                    <h2 style="color:#333131;">Processamento de Requisições</h2>
-                    <ul>
-                        <li style="font-size: 30px;" class="fragment">Aplicativo envia request para o Gateway</li>
-                        <li style="font-size: 30px;" class="fragment">Gateway aplica possíveis transformações no request e envia para o Endpoint</li>
-                        <li style="font-size: 30px;" class="fragment">Gateway envia response para o aplicativo após aplicar possíveis transformações</li>
-                        <li style="font-size: 30px;" class="fragment">Gateway envia evento para o Event Handler</li>
-                        <li style="font-size: 30px;" class="fragment">Event Handler envia evento para Logstash que aplica possíveis ofuscações e persiste no ElasticSearch</li>
-                    </ul>
-                </section>
-                <section ata-transition="slide" data-background="#ffffff" data-background-transition="slide">
-                    <h2 style="color:#333131;">Visualização de Logs</h2>
-                    <ul>
-                        <li style="font-size: 30px;" class="fragment">Usuário cria query através da interface de usuário</li>
-                        <li style="font-size: 30px;" class="fragment">Zupme UI envia query para API Manager</li>
-                        <li style="font-size: 30px;" class="fragment">API Manager realiza consulta no Elasticsearch</li>
-                        <li style="font-size: 30px;" class="fragment">Elasticsearch retorna eventos para o API Manager</li>
-                    </ul>
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#000">Monitoramento</h2>
-                    <img style="width:150%;" src="images/moni.png" >
-                </section>
-                <section  data-background="#ffffff" data-transition="zoom">
-                    <p>Um monitoramento proativo de TI é fundamental para a empresa reduzir ou eliminar o tempo de inatividade da sua infraestrutura, a fim de minimizar os prejuízos gerados por desastres, e principalmente, melhorar a qualidade dos serviços prestados aos seus clientes.</p>
-                    </br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p class="fragment">Dessa forma, a plataforma Zup foi desenvolvida a fim de facilitar a detecção de incidentes que vão desde simples notificações por e-mail, até integração com sistemas de monitoramento robustos.</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff" data-transition="zoom">
-                    <h1 style="color:#23887E;">O que monitorar?</h1>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#E4D631;">Api Manager</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#E4D631;">Processos</h2>
-                        <ul>
-                            <li class="fragment">Puma (api) - Ruby Web Server</li>
-                            <li class="fragment">Puma (user) - Ruby Web Server</li>
-                            <li class="fragment">Nginx - HTTP and reverse proxy server</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#E4D631;">Portas</h2>
-                        <ul>
-                            <li class="fragment">443</li>
-                            <li class="fragment">6000</li>
-                            <li class="fragment">6010</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#236B8E;">PostgreSQL</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Processos</h2>
-                        <ul>
-                            <li class="fragment">postgres - Sistema de banco de dados</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Portas</h2>
-                        <ul>
-                            <li class="fragment">5432</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Data Volumes</h2>
-                        <ul>
-                            <li class="fragment">/data/pqsql</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#215E21;">Gateway</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#215E21;">Processos</h2>
-                        <ul>
-                            <li class="fragment">Node (zupme-gateway.js) - JavaScript runtime built</li>
-                            <li class="fragment">Node (event-processor.js) - JavaScript runtime built</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#215E21;">Portas</h2>
-                        <ul>
-                            <li class="fragment">443</li>
-                            <li class="fragment">8443</li>
-                            <li class="fragment">8020</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#A62A2A ;">Couchbase</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#A62A2A ;">Processos</h2>
-                        <ul>
-                            <li class="fragment">beam.smp - NoSQL database</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#A62A2A ;">Portas</h2>
-                        <ul>
-                            <li class="fragment">8091</li>
-                            <li class="fragment">8092</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#6B238E;">Event Handler</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#6B238E;">Processos</h2>
-                        <ul>
-                            <li class="fragment">Iojs (cockpit-event-handler.js) - JavaScript runtime built</li>
-                            <li class="fragment">Iojs (event-broker.js) - JavaScript runtime built</li>
-                            <li class="fragment">Logstash - Java </li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#6B238E;">Portas</h2>
-                        <ul>
-                            <li class="fragment">8005</li>
-                            <li class="fragment">8009</li>
-                            <li class="fragment">8006</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" data-transition="slide" >
-                        <h2 style="color:#236B8E;">ElasticSearch</h2>
-                        <p class="fragment roll-in">
-                        </p>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Processos</h2>
-                        <ul>
-                            <li class="fragment">elasticsearch - Java</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Portas</h2>
-                        <ul>
-                            <li class="fragment">9200</li>
-                            <li class="fragment">9300</li>
-                        </ul>
-                    </section>
-                    <section data-background="#ffffff" data-transition="zoom">
-                        <h2 style="color:#236B8E;">Data Volumes</h2>
-                        <ul>
-                            <li class="fragment">/data/elasticsearch</li>
-                        </ul>
-                    </section>
-                </section>
-                <section data-background="#ffffff" data-transition="zoom">
-                    <h2 style="color:#0c1e80;">Problemas e riscos potenciais (Experiências do Time Zup)</h2>
-                    <img style="width:30%;" src="images/boneco.jpg" >
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#4A766E">Erro ao logar</h2>
-                    <p>Quando um usuário tenta usar suas credenciais de acesso para entrar na plataforma, e
-                        um erro desconhecido é retornado, geralmente a causa é a falha na consulta do User Manager com o servidor LDAP.
-                    </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p>Verificar status do serviço do User Manager</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#8C1717">Erro 500 ao realizar deploy</h2>
-                    <p>Erro 500 (Internal Server Error) pode estar relacionado a muitos motivos. Nesse caso é preciso verificar os logs para tentar diagnosticar. </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p>Os motivos mais frequentes são</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#65DD58"></h2>
-                    <p>Falha de comunicação entre o zupme-api-manager-api e o zupme-gateway</p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p># zupme-api-manager-api logs --tail</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <p>Falha de comunicação entre o zupme-gateway e o zupme-event-handler </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p># zupme-gateway logs --tail</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <p>Falha de comunicação entre o zupme-gateway e o couchbase </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p>Verificar se há conectividade na porta 11211, 8091 ​e​ 8092 ​ do Gateway para o Couchbase.</br></br># zupme-gateway logs --tail</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <p>Falha de comunicação entre o zupme-event-handler e o couchbase </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p>cockpit-event-handler logs --tail</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#007FFF">Os logs não são exibidos</h2>
-                    <p>Quando não são exibidos Logs na sessão de Logs da aplicação de um dia para o outro,
-                        pode ser que os índices e aliases do ElasticSearch não tenham sido criados.
-                    </p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p>$ tail -f /var/log/zupme-api-manager-api/job_scheduler-1.log</br></br>
-                                $ tail -f /var/log/zupme-api-manager-api/es_worker-1.log
-                            </p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="#ffffff">
-                    <h2 style="color:#238E23">Como verificar se os índices e aliases do ElasticSearch foram criados</h2>
-                    <p></p>
-                    </br></br></br></br></br>
-                    <p>
-                    <center>
-                        <a href="http://zup.com.br">
-                            <p> $ curl http://elasticsearch-host:9200/_cat/indices</br></br>$ curl http://elasticsearch-host:9200/_cat/aliases</p>
-                        </a>
-                    </center>
-                    </p>
-                </section>
-                <section data-background="images/code.jpg">
-                    <h1>Infraestrutura as Code</h1>
-                </section>
-                </section>
-                <section data-background="#ffffff">
-                    <section data-background="#ffffff" >
-                        <h3 style="color: #F37911;">Minimização de interrupções – ZeroDowntime</h3>
-                        <img style="width: 100%;"  src="images/down.png"/>
-                    </section>
-                    <section data-background="#ffffff" >
-                        <h3 style="color: #F37911;">Minimização de interrupções – ZeroDowntime</h3>
-                        <img style="width: 100%;"  src="images/down1.png"/>
-                    </section>
-                </section>
+
+				
+				
+				
                 <section data-background="#000000">
-                    <h1>Obrigado</h1>
+                    <h1>Obrigado</h1></br>
                 </section>
             </div>
         </div>
